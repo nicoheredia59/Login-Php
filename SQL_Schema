@@ -12,6 +12,10 @@ CREATE TABLE users(
 CREATE TABLE posts(
     id_post int(10) PRIMARY KEY auto_increment,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+<<<<<<< HEAD
+=======
+    title varchar(100) NOT NULL,
+>>>>>>> 6e8d884735abeb4c20d55b0b5e47cf2839c0cb68
     content varchar(100) NOT NULL
 );
 
@@ -20,5 +24,5 @@ CREATE TABLE make(
     id_user int,
     created datetime,
     FOREIGN KEY (id_post) REFERENCES posts (id_post), 
-    FOREIGN KEY (user_name) REFERENCES users (user_name)
+    FOREIGN KEY (id_user) REFERENCES users (id_user)
 );
