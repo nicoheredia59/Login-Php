@@ -19,18 +19,13 @@
 ?>
 
 <?php include('includes/header.php') ?>
-    <div class="container">
+  <?php include 'nav.php' ?>
+    <div class="container col col-md4">
     <?php if(!empty($user)): ?>
-      <br> Welcome. <?= $user['name']; ?>
-      <br>You are Successfully Logged In
-
-      
-      <a href="make_post.php" class="btn btn-primary" >
-       Make a post
-      </a>
-      <a href="Log_out.php">
-        Logout
-      </a>
+       <p>Welcome. <h1><?= $user['name']; ?></h1></p>
+       <p>Check recent posts</p>
+       <?php include('get_posts.php') ?>
+       
     <?php endif; ?>
     </div>
 <?php include('includes/footer.php') ?>
