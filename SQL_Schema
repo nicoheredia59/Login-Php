@@ -7,19 +7,19 @@ CREATE TABLE users(
     name varchar(50) NOT NULL,
     password varchar(100) NOT NULL,
     PRIMARY KEY(id_user, user_name)
-),
+);
 
 CREATE TABLE posts(
     id_post int(10) PRIMARY KEY auto_increment,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     title varchar(100) NOT NULL,
     content varchar(100) NOT NULL
-),
+);
 
 CREATE TABLE make(
     id_post int,
     id_user int,
     created datetime,
     FOREIGN KEY (id_post) REFERENCES posts (id_post), 
-    FOREIGN KEY (user_name) REFERENCES users (user_name)
+    FOREIGN KEY (id_user) REFERENCES users (id_user)
 );
